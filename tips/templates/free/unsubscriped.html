@@ -1,15 +1,7 @@
-{% extends "base.html" %}
-
 {% load static %}
-
-{% block title %}
-
-Predictpoa.com - Vip Payment Methods
-
-{% endblock %}
-
-{% block content %}
-<br>
+<div class="jumbotron">
+<h5 class="text-center">Sorry {{ request.user.username }},  You have not subscribed to the vip </h5>
+</div>
 <div class="container">
    <div class="row" >
 
@@ -28,11 +20,24 @@ Predictpoa.com - Vip Payment Methods
 
      </div>
 
-     <div class="col-sm-6 ">
-       <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+     <div class="col-sm-4 offset-md-1 ">
+
+       <div class="card border-success mb-3" style="max-width: 18rem;">
+
+  <div class="card-header bg-info border-success" align = "center">Procedure</b></div>
+
+  <div class="card-body text-success" align = "center">
+    <hr>
+<p>Click on payment</p>
+<p>Choose the convenient method</p>
+<p>Make your payment</p>
+<p>Send us the username</p>
+<p>Login again</p>
+  </div>
+
+  </div>
+
      </div>
 
    </div>
  </div>
-
-{% endblock %}

@@ -8,7 +8,7 @@ urlpatterns = [
     path('payment/', views.payment, name = "payment"),
     path('viptips/', views.viptips, name = "viptips"),
     path('signup/', views.signup, name = "signup"),
-    path('viptips/', views.viptips, name = "viptips"),
+    path('viptipsgames/', views.viptipsgames, name = "viptips"),
     path('punterpick/', views.punterpick, name = "punterpick"),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

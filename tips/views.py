@@ -66,7 +66,7 @@ def signup(request):
 
     return render(request, 'free/signup.html', {'form':form})
 
-def viptips(request):
+def viptipsgames(request):
 
     model = vipTipsGame
 
