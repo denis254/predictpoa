@@ -1,6 +1,6 @@
 {% load static %}
 <div class="jumbotron">
-<h5 class="text-center">Sorry {{ request.user.username }},  You have not subscribed to the vip </h5>
+<h5 class="text-center">Sorry {{ request.user.username }},  You have not paid to the vip </h5>
 </div>
 <div class="container">
    <div class="row" >
@@ -40,4 +40,16 @@
      </div>
 
    </div>
+ </div>
+
+   <div class="jumbotron">
+   <h5 class="text-center">What people says about Predict Poa </h5>
+   </div>
+   <div class="container">
+  <div class="row" >
+   <div class="col-sm-8 ">
+     <div class="fb-comments" data-href="https://predictpoa.herokuapp.com" data-numposts="6" data-order-by="reverse_time"></div>
+   </div>
+ </div>
+
  </div>
