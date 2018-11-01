@@ -19,9 +19,8 @@
 
 <tr style='background-color: indigo'>
 <th style='color: white'>Country</th>
-<th style='color: white'>Home Team</th>
+<th style='color: white'>Teams</th>
 <th style='color: white'>Scores</th>
-<th style='color: white'>Away Team</th>
 <th style='color: white'>Prediction</th>
 <th style='color: white'>Odds</th>
 <th style='color: white'>Status</th>
@@ -32,11 +31,9 @@
                          <tr>
                              <td style='background-color: plum;' >{{ item.country }}</td>
 
-                             <td >{{ item.home_team }}</td>
+                             <td >{{ item.home_team }}  <i class="fas fa-align-justify"></i>  {{ item.away_team}}</td>
 
                              <td style='background-color: plum;' >{{ item.home_score}} - {{ item.away_score}}</td>
-
-                             <td>{{ item.away_team}}</td>
 
                              <td style='background-color: plum;' >{{ item.prediction}}</td>
 
