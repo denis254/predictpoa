@@ -97,3 +97,9 @@ def punterpick(request):
     args ['home_page_teams'] = home_page_teams
 
     return render(request, 'free/punterpick.html', args)
+
+def twitter(request):
+    return redirect("https://twitter.com/predictpoa/")
+
+def facebook(request):
+    return redirect("https://web.facebook.com/Predictpoacom-261755261206726/?modal=admin_todo_tour/")
