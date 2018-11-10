@@ -13,9 +13,7 @@ def home(request):
 
     args = {}
 
-    home_page_teams = FreeTipsGame.objects.filter(
-        date_added__lte=timezone.now()
-    ).order_by('-date_added')
+    home_page_teams = FreeTipsGame.objects.filter(ticket__published=True)
 
     args ['home_page_teams'] = home_page_teams
 
@@ -30,9 +28,7 @@ def results(request):
 
     args = {}
 
-    home_page_teams = FreeTipsGame.objects.filter(
-        date_added__lte=timezone.now()
-    ).order_by('-date_added')
+    home_page_teams = FreeTipsGame.objects.filter(ticket__published=True)
 
     args ['home_page_teams'] = home_page_teams
 
@@ -74,9 +70,7 @@ def viptipsgames(request):
 
     args = {}
 
-    home_page_teams = vipTipsGame.objects.filter(
-        date_added__lte=timezone.now()
-    ).order_by('-date_added')
+    home_page_teams = vipTipsGame.objects.filter(ticket__published=True)
 
     args ['home_page_teams'] = home_page_teams
 
@@ -90,9 +84,7 @@ def punterpick(request):
 
     args = {}
 
-    home_page_teams = punterTipsGame.objects.filter(
-        date_added__lte=timezone.now()
-    ).order_by('-date_added')
+    home_page_teams = punterTipsGame.objects.filter(ticket__published=True)
 
     args ['home_page_teams'] = home_page_teams
 

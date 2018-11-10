@@ -9,6 +9,8 @@ class Ticket(models.Model):
     published = models.BooleanField(default=False)
     def __str__(self):
         return self.ticket
+    class Meta:
+       ordering = ['-date_added',]
 
 class FreeTipsGame(models.Model):
     STATUS_CHOICES = (
@@ -16,8 +18,6 @@ class FreeTipsGame(models.Model):
         ('Won', 'Won'),
         ('Lost', 'Lost'),
     )
-
-    date_added = models.DateTimeField(auto_now_add=True, null = True)
 
     ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, null = True)
 
@@ -36,6 +36,9 @@ class FreeTipsGame(models.Model):
     odds = models.CharField(max_length = 100, null = True, blank = True)
 
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='running')
+
+    class Meta:
+        ordering = ['-ticket__date_added',]
 
     def __str__(self):
        return str(self.home_team)
@@ -47,8 +50,6 @@ class vipTipsGame(models.Model):
         ('Lost', 'Lost'),
     )
 
-    date_added = models.DateTimeField(auto_now_add=True, null = True)
-
     ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, null = True)
 
     country = models.CharField(max_length = 200, null = True)
@@ -66,6 +67,9 @@ class vipTipsGame(models.Model):
     odds = models.CharField(max_length = 100, null = True, blank = True)
 
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='running')
+
+    class Meta:
+        ordering = ['-ticket__date_added',]
 
     def __str__(self):
        return str(self.home_team)
@@ -77,8 +81,6 @@ class punterTipsGame(models.Model):
         ('Lost', 'Lost'),
     )
 
-    date_added = models.DateTimeField(auto_now_add=True, null = True)
-
     ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, null = True)
 
     country = models.CharField(max_length = 200, null = True)
@@ -96,6 +98,9 @@ class punterTipsGame(models.Model):
     odds = models.CharField(max_length = 100, null = True, blank = True)
 
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='running')
+
+    class Meta:
+        ordering = ['-ticket__date_added',]
 
     def __str__(self):
        return str(self.home_team)
