@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from . models import FreeTipsGame, vipTipsGame, punterTipsGame, singlebet
+from . models import FreeTipsGame, vipTipsGame, punterTipsGame
 from django.utils import timezone
 from . forms import RegistrationForm
 from django.contrib import messages
@@ -89,20 +89,6 @@ def punterpick(request):
     args ['home_page_teams'] = home_page_teams
 
     return render(request, 'free/punterpick.html', args)
-
-def singlebet(request):
-
-    model = singlebet
-
-    template_name = 'singlebet.html'
-
-    args = {}
-
-    home_page_teams = singlebet.objects.filter(ticket__published=True)
-
-    args ['home_page_teams'] = home_page_teams
-
-    return render(request, 'free/singlebet.html', args)
 
 def twitter(request):
     return redirect("https://twitter.com/predictpoa/")

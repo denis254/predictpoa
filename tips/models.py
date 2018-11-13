@@ -105,37 +105,6 @@ class punterTipsGame(models.Model):
     def __str__(self):
        return str(self.home_team)
 
-class singlebet(models.Model):
-    STATUS_CHOICES = (
-        ('Running', 'Running'),
-        ('Won', 'Won'),
-        ('Lost', 'Lost'),
-    )
-
-    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, null = True)
-
-    country = models.CharField(max_length = 200, null = True)
-
-    home_team = models.CharField(max_length = 200, null = True)
-
-    home_score = models.PositiveIntegerField(default = 0)
-
-    away_score = models.PositiveIntegerField(default = 0)
-
-    away_team = models.CharField(max_length = 200, null = True)
-
-    prediction = models.CharField(max_length = 100, null = True)
-
-    odds = models.CharField(max_length = 100, null = True, blank = True)
-
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='running')
-
-    class Meta:
-        ordering = ['-ticket__date_added',]
-
-    def __str__(self):
-       return str(self.home_team)
-
 class Profile(models.Model):
     STATUS_CHOICES = (
         ('free', 'free'),
