@@ -12,5 +12,6 @@ urlpatterns = [
     path('signup/', views.signup, name = "signup"),
     path('viptipsgames/', views.viptipsgames, name = "viptips"),
     path('punterpick/', views.punterpick, name = "punterpick"),
+    path('singlebet/', views.singlebet, name = "singlebet"),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
