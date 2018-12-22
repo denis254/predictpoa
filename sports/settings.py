@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tips',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,5 @@ admin.site.site_header = 'Predict Poa  Admin Panel'
 admin.site.site_title = 'Predict Poa Admin Panel'
 
 ADMINS = (('Denis Kiprono', 'deniskiprono4@gmail.com'),)
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
