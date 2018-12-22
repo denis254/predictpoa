@@ -122,3 +122,16 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
     instance.profile.save()
+
+# comments on post
+class Comment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
+    add_Comment = models.CharField(null=False, max_length=140)
+    time = models.DateTimeField(null=False, auto_now_add=True)
+    published = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-time']
+
+    def __str__(self):
+        return self.add_Comment
