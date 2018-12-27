@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from . models import FreeTipsGame, vipTipsGame, punterTipsGame, Comment
+from . models import FreeTipsGame, vipTipsGame, punterTipsGame
 from django.utils import timezone
-from . forms import RegistrationForm, CommentForm
+from . forms import RegistrationForm
 from django.contrib import messages
 
 #Today's Free tips method
@@ -95,32 +95,3 @@ def twitter(request):
 
 def facebook(request):
     return redirect("https://web.facebook.com/Predictpoacom-261755261206726/?modal=admin_todo_tour/")
-
-def comment(request):
-
-    model =  Comment
-
-    template_name = 'comment.html'
-
-    comments = Comment.objects.filter(published=True)
-
-    if request.method == 'POST':
-
-        form = CommentForm(request.POST)
-
-        if form.is_valid():
-
-            form.instance.user = request.user
-
-            comment = form.save()
-
-            comment.save()
-
-            return redirect('/home')
-
-    else:
-        form = CommentForm()
-
-
-    return render(request, 'free/comment.html', {'comments':comments,
-        'form':form,})

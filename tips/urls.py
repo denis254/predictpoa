@@ -13,5 +13,4 @@ urlpatterns = [
     path('viptipsgames/', views.viptipsgames, name = "viptips"),
     path('punterpick/', views.punterpick, name = "punterpick"),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('comment/', views.comment, name = "comment"),
 ]
