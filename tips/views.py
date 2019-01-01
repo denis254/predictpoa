@@ -37,6 +37,9 @@ def results(request):
 def payment(request):
     return render(request, 'free/payment.html')
 
+def pricing(request):
+    return render(request, 'free/pricing.html')
+
 def viptips(request):
     return render(request, 'free/viptips.html')
 
