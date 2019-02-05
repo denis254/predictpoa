@@ -6,7 +6,7 @@ from django.contrib import messages
 
 #Today's Free tips method
 def home(request):
-    return redirect("http://www.palsbet.com/")
+    return render(request, 'free/home.html')
 
 #Free tips results method
 def results(request):
