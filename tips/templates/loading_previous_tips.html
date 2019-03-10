@@ -1,6 +1,6 @@
 {% load static %}
 <div class="jumbotron">
-<h5 class="text-center">Betting is more fun when you are winning </h5>
+<h5 class="text-center"> Predict poa is an America based company giving tips in America, Europe, and Africa.Call or whatsapp us on +1 (754) 702-8967 </h5>
 </div>
 <!-- table for today's tips -->
              {% regroup home_page_teams by ticket as ticket_list %}
@@ -35,9 +35,9 @@
 
                              <td style='background-color: plum;' >{{ item.home_score}} - {{ item.away_score}}</td>
 
-                             <td style='background-color: plum;' >{{ item.prediction}}</td>
+                             <td >{{ item.prediction}}</td>
 
-                             <td>{{ item.odds}}</td>
+                             <td style='background-color: plum;'>{{ item.odds}}</td>
 
                              {% if item.status == 'Lost' %}
 
