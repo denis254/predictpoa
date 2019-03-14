@@ -6,7 +6,7 @@ from django.contrib import messages
 
 #Today's Free tips method
 def home(request):
-    return redirect("www.palsbet.com")
+    return redirect("https://palsbetc.herokuapp.com/")
 
 #Free tips results method
 def results(request):
