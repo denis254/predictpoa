@@ -6,7 +6,17 @@ from django.contrib import messages
 
 #Today's Free tips method
 def home(request):
-    return redirect("https://palsbetc.herokuapp.com/")
+    model = FreeTipsGame
+
+    template_name = 'home.html'
+
+    args = {}
+
+    home_page_teams = FreeTipsGame.objects.filter(ticket__published=True)
+
+    args ['home_page_teams'] = home_page_teams
+
+    return render(request, 'free/home.html', args)
 
 #Free tips results method
 def results(request):
@@ -84,6 +94,9 @@ def punterpick(request):
 
 def twitter(request):
     return redirect("https://twitter.com/predictpoa/")
+
+def whatsapp(request):
+    return redirect("https://api.whatsapp.com/send?phone=+16282596468")
 
 def facebook(request):
     return redirect("https://web.facebook.com/Predictpoacom-261755261206726/?modal=admin_todo_tour/")
