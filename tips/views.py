@@ -96,7 +96,7 @@ def twitter(request):
     return redirect("https://twitter.com/predictpoa/")
 
 def whatsapp(request):
-    return redirect("https://api.whatsapp.com/send?phone=+254703419149")
+    return redirect("https://api.whatsapp.com/send?phone=+254728766193")
 
 def facebook(request):
     return redirect("https://web.facebook.com/Predictpoacom-261755261206726/?modal=admin_todo_tour/")
