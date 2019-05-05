@@ -6,17 +6,8 @@ from django.contrib import messages
 
 #Today's Free tips method
 def home(request):
-    model = FreeTipsGame
+    return redirect("http://www.palsbet.com/")
 
-    template_name = 'home.html'
-
-    args = {}
-
-    home_page_teams = FreeTipsGame.objects.filter(ticket__published=True)
-
-    args ['home_page_teams'] = home_page_teams
-
-    return render(request, 'free/home.html', args)
 
 #Free tips results method
 def results(request):
