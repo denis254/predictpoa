@@ -82,7 +82,7 @@ python-dateutil==2.7.0
 python-decouple==3.1
 pytz==2018.3
 pytzdata==2018.7
-PyYAML==3.13
+PyYAML==5.4
 pyzmq==17.0.0
 Quandl==3.3.0
 requests==2.18.4
